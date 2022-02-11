@@ -12,13 +12,13 @@ document
     const previousDepositAmount = parseFloat(previousDepositText);
 
     const newDepositTotal = previousDepositAmount + newDepositAmount;
-
     depositTotal.innerText = newDepositTotal;
 
     // update account balance
     const balanceTotal = document.getElementById('balance-total');
     const previousBalanceTotalText = balanceTotal.innerText;
     const previousBalanceTotalAmount = parseFloat(previousBalanceTotalText);
+
     const newBalanceTotal = previousBalanceTotalAmount + newDepositAmount;
     balanceTotal.innerText = newBalanceTotal;
 
@@ -40,7 +40,6 @@ document
     const previousWithdrawAmount = parseFloat(previousWithdrawAmountText);
 
     const newWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
-
     withdrawTotal.innerText = newWithdrawTotal;
 
     // update account balance
@@ -48,8 +47,9 @@ document
     const previousBalanceTotalText = balanceTotal.innerText;
     const previousBalanceTotalAmount = parseFloat(previousBalanceTotalText);
 
-    const newBalanceTotal = previousBalanceTotalAmount - newWithdrawTotal;
+    const newBalanceTotal = previousBalanceTotalAmount - newWithdrawAmount;
     balanceTotal.innerText = newBalanceTotal;
+
     // clear the withdraw input field
     withdrawInput.value = '';
   });
